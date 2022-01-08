@@ -5,8 +5,8 @@
             <div class="container-fluid">
                 <div class="page-titles">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="javascript:void(0)">Jadwal</a></li>
-						<li class="breadcrumb-item active"><a href="javascript:void(0)">Jadwal Event</a></li>
+						<li class="breadcrumb-item"><a href="javascript:void(0)">Cabang</a></li>
+						<li class="breadcrumb-item active"><a href="javascript:void(0)">Cabang Olahraga</a></li>
 					</ol>
                 </div>
                 <!-- row -->
@@ -17,12 +17,13 @@
 					<div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Database Event</h4>
+                                <h4 class="card-title">Database Cabang Olahraga</h4>
                             </div>
                             <div class="card-body">
                                 <div class="col-md-12 row">
                                 </div>
                                 <div class="table-responsive">
+                                    <a href="<?=base_url('admin/cetak_cabang')?>" class="btn btn-success btn-xs" target="_blank"> Cetak</a>
                                     <table id="example3" class="display min-w850">
                                         <thead>
                                             <tr>

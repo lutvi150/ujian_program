@@ -61,6 +61,23 @@ class Admin extends CI_Controller
         $data['event'] = $this->model->getdata('table_event');
         $this->menu('atlet/event', $data);
     }
+    public function cetak_cabang(Type $var = null)
+    {
+        $data['title'] = 'Cabang Olah Raga';
+        $cabang = $this->model->getData('table_cabang_olahraga');
+        if ($cabang !== null) {
+            foreach ($cabang as $key => $value) {
+                $getCabang[] = [
+                    'nama_cabang_olahraga' => $value->nama_cabang_olahraga,
+                    'jumlah_atlet' => $this->model->hitungAtlePercabang($value->id_cabang),
+                ];
+            }
+            $data['cabang'] = json_decode(json_encode($getCabang));
+        }
+        $this->load->view('cetak/cetak_cabang', $data);
+        // echo json_encode($data);
+
+    }
 
 }
 
